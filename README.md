@@ -57,7 +57,7 @@ to your collectd configuration to load this plugin:
     </LoadPlugin>
 
     <Plugin "python">
-        # collectd-librato.py is at /opt/collectd-sensu-0.0.1/lib/collectd-sensu.py
+        # collectd-sensu.py is at /opt/collectd-sensu-0.0.1/lib/collectd-sensu.py
         ModulePath "/opt/collectd-sensu-0.0.1/lib"
 
         Import "collectd-sensu"
@@ -66,7 +66,7 @@ to your collectd configuration to load this plugin:
 
 The output above includes a sample configuration file for the
 plugin. Simply add this to `/etc/collectd.conf` or drop in the
-configuration directory as `/etc/collectd.d/librato.conf` and restart
+configuration directory as `/etc/collectd.d/sensu.conf` and restart
 collectd. See the next section for an explanation of the plugin's
 configuration variables.
 
@@ -109,15 +109,15 @@ The following parameters are available:
 
 * `Source` - By default the source name is taken from the configured
   collectd hostname. If you want to override the source name that is
-  used with Librato Metrics you can set the `Source` variable to a
+  used with Sensu you can set the `Source` variable to a
   different source name.
 
 * `IncludeRegex` - This option can be used to control the metrics that
-  are sent to Librato Metrics. It should be set to a comma-separated
+  are sent to Sensu. It should be set to a comma-separated
   list of regular expression patterns to match metric names
   against. If a metric name does not match one of the regex's in this
-  variable, it will not be sent to Librato Metrics. By default, all
-  metrics in collectd are sent to Librato Metrics. For example, the
+  variable, it will not be sent to Sensu. By default, all
+  metrics in collectd are sent to Sensu. For example, the
   following restricts the set of metrics to CPU and select df metrics:
 
   `IncludeRegex "collectd.cpu.*,collectd.df.df.dev.free,collectd.df.df.root.free"`
@@ -155,7 +155,7 @@ The following is an example Collectd configuration for this plugin:
 
 ## Supported Metrics
 
-Collectd-Librato currently supports the following collectd metric
+Collectd-Sensu currently supports the following collectd metric
 types:
 
 * GAUGE,COUNTER,DERIVE
