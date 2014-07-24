@@ -1,5 +1,5 @@
 # Introduction
-
+[![Code Health](https://landscape.io/github/jhmartin/collectd-sensu/master/landscape.png)](https://landscape.io/github/jhmartin/collectd-sensu/master)
 collectd-sensu is a [collectd](http://www.collectd.org/) plugin that
 publishes collectd values to [Sensu](https://sensuapp.org) using the Event Data API to Sensu Client.
 
