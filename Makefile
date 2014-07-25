@@ -16,6 +16,7 @@ install:
 	@echo '    <Plugin "python">'
 	@echo '        # $(PLUGIN) is at $(DEST_DIR)/$(PLUGIN_DIR)/$(PLUGIN)'
 	@echo '        ModulePath "$(DEST_DIR)/$(PLUGIN_DIR)"'
+	@echo '        Interactive false'
 	@echo
 	@echo '        Import "collectd_sensu"'
 	@echo
