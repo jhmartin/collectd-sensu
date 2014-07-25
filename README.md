@@ -32,6 +32,7 @@ LoadPlugin memory
 <Plugin "python">
   ModulePath "/usr/lib64/collectd/python"
   Import "collectd_sensu"
+  Interactive false
 </Plugin>
 
 ```
@@ -59,6 +60,7 @@ to your collectd configuration to load this plugin:
     <Plugin "python">
         # collectd-sensu.py is at /opt/collectd-sensu-0.0.1/lib/collectd-sensu.py
         ModulePath "/opt/collectd-sensu-0.0.1/lib"
+        Interactive false
 
         Import "collectd-sensu"
     </Plugin>
@@ -147,6 +149,7 @@ The following is an example Collectd configuration for this plugin:
         ModulePath "/opt/collectd-sensu-0.0.1/lib"
 
         Import "collectd_sensu"
+        Interactive false
 
         <Module "collectd_sensu">
             Port "3031"
